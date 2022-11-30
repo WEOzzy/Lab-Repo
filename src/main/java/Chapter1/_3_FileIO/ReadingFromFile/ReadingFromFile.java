@@ -1,6 +1,8 @@
 package Chapter1._3_FileIO.ReadingFromFile;
 
 import java.io.FileNotFoundException;
+import java.io.File; // import the File class
+import java.util.Scanner; // scanner class
 
 
 public class ReadingFromFile {
@@ -19,6 +21,9 @@ public class ReadingFromFile {
      *                                  lead to crashing our program.
      */
     public String read(String filepath) throws FileNotFoundException {
-        return null;
+        File myFile = new File(filepath); // create myFile as a File object from the file at the provided path
+        Scanner sc = new Scanner(myFile); // create scanner object sc
+        String firstLine = sc.nextLine(); // read the first line of the file into firstLine variable
+        return firstLine;
     }
 }
