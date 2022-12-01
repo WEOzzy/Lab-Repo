@@ -1,5 +1,8 @@
 package Chapter1._3_FileIO.WritingToFile;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class WriteToFile {
     /**
      * This is a research problem!
@@ -10,6 +13,12 @@ public class WriteToFile {
      * @param text the text to be written to a file.
      */
     public void write(String filepath, String text){
-
+        try {
+            FileWriter myWriter = new FileWriter(filepath);
+            myWriter.write(text);
+            myWriter.close();
+        } catch(IOException e){
+            System.out.println("An IO error occurred");
+        }
     }
 }

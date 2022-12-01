@@ -24,6 +24,7 @@ public class ReadingFromFile {
         File myFile = new File(filepath); // create myFile as a File object from the file at the provided path
         Scanner sc = new Scanner(myFile); // create scanner object sc
         String firstLine = sc.nextLine(); // read the first line of the file into firstLine variable
+        sc.close();
         return firstLine;
     }
 }
