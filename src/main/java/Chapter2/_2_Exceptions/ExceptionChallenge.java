@@ -11,6 +11,7 @@ public class ExceptionChallenge {
      * Write a method to throw an exception (you will also need to add a 'throws' declaration to allow the method
      * to compile.)
      */
-    public void mustThrow(){
+    public void mustThrow() throws Exception {
+        throw new Exception();
     }
 }

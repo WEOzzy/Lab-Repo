@@ -37,7 +37,7 @@ public class CreateATable {
      */
     public void createTable(){
         //Write SQL logic here
-        String sql = "CHANGE ME";
+        String sql = "CREATE Table songs (Title text PRIMARY KEY, Artist text);";
 
         try {
             Connection connection = ConnectionUtil.getConnection();
