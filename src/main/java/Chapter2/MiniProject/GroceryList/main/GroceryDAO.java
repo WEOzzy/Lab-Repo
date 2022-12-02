@@ -13,7 +13,7 @@ import java.util.List;
  * A DAO is a class that mediates the transformation of data between the format of objects in Java to rows in a
  * database. The methods here are mostly filled out, you will just need to add a SQL statement.
  *
- * We may assume that the database has already created a table named 'groceries'.
+ * We may assume that the database has already created a table named 'groceries'. ## Table name grocery ##
  * It contains a single column, named 'grocery_name' of type varchar(255).
  */
 public class GroceryDAO {
@@ -29,7 +29,7 @@ public class GroceryDAO {
         List<String> groceries = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "change me!";
+            String sql = "SELECT * FROM grocery;";
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
@@ -49,7 +49,7 @@ public class GroceryDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "change me!";
+            String sql = "INSERT INTO grocery (grocery_name) VALUES ('" + groceryName + "');";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         }catch(SQLException e){

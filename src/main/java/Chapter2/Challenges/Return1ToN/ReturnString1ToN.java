@@ -12,6 +12,10 @@ public class ReturnString1ToN {
      * @return a string of all numbers between 1 to N.
      */
     public String returnNumber(int n){
-        return "";
+        String str = "";
+        for (int i=1; i<=n; i++){
+            str = str.concat(Integer.toString(i)).concat(" ");
+        }
+        return str;
     }
 }

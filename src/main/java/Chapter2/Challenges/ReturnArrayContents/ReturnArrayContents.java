@@ -15,6 +15,11 @@ public class ReturnArrayContents {
      * @return a string representation of all values of nums, with the values separated by commas and spaces.
      */
     public String arrayToString(int[] nums){
-        return "";
+        String arrStr = "";
+        for (int i = 0; i < nums.length - 1; i++){
+            arrStr = arrStr.concat(Integer.toString(nums[i])).concat(", ");
+        }
+        arrStr = arrStr.concat(Integer.toString(nums[nums.length - 1]));
+        return arrStr;
     }
 }
