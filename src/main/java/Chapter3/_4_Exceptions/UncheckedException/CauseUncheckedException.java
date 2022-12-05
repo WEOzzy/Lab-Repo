@@ -10,6 +10,9 @@ public class CauseUncheckedException {
      * For this challenge, I recommend creatively causing such an exception rather than using the 'throws' keyword.
      */
     public void throwUncheckedException(){
-
+        int[] arr = {1, 2, 3};
+        for (int i = 0; i <= arr.length; i++){
+            System.out.println(arr[i]);
+        }
     }
 }

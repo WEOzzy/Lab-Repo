@@ -1,4 +1,5 @@
 package Chapter3._3_Math;
+import static java.lang.Math.pow;
 
 public class MathClass {
     /**
@@ -11,6 +12,6 @@ public class MathClass {
      * @return return a^b using the pow() method of the Math class.
      */
     public double mathPow(double a, double b){
-        return 0;
+        return pow(a, b);
     }
 }

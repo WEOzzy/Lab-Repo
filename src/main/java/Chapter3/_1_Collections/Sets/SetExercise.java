@@ -1,5 +1,6 @@
 package Chapter3._1_Collections.Sets;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -16,7 +17,8 @@ public class SetExercise {
      * @return a Set object.
      */
     public Set<Integer> createSet(){
-        return null;
+        Set<Integer> set = new HashSet<>();
+        return set;
     }
 
     /**
@@ -24,7 +26,7 @@ public class SetExercise {
      * @return the size of set. (number of values)
      */
     public int getSize(Set<Integer> set){
-        return 0;
+        return set.size();
     }
 
     /**
@@ -33,7 +35,7 @@ public class SetExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public Set<Integer> addUniqueItem(Set<Integer> set, int item){
-//        add item to set before returning
+        set.add(item);
         return set;
     }
 
@@ -43,7 +45,7 @@ public class SetExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public Set<Integer> removeItem(Set<Integer> set, int item){
-//        remove item before returning
+        set.remove(item);
         return set;
     }
 }
