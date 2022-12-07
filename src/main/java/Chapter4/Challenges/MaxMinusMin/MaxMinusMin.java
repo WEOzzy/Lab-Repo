@@ -7,6 +7,16 @@ public class MaxMinusMin {
      * @return the max value of nums minus the min value of nums.
      */
     public int difference(int[] nums){
-        return 0;
+        int max = nums[0];
+        int min = max;
+        for (int i = 0; i < nums.length; i++){
+            if (max < nums[i]){
+                    max = nums[i];
+            }
+            if (min > nums[i]){
+                min = nums[i];
+            }
+        }
+        return max - min;
     }
 }

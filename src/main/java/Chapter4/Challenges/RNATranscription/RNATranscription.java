@@ -1,6 +1,8 @@
 package Chapter4.Challenges.RNATranscription;
 
 
+import java.util.HashMap;
+
 public class RNATranscription {
     /**
      * It may sound hard, but DNA gets converted to RNA with a simple method:
@@ -15,6 +17,18 @@ public class RNATranscription {
      * @return the RNA form of dna, using the formula for transcription written above.
      */
     public String transcript(String dna){
-        return null;
+        HashMap<Character, Character> conversionMap = new HashMap<>();
+        conversionMap.put('T', 'A');
+        conversionMap.put('A', 'U');
+        conversionMap.put('C', 'G');
+        conversionMap.put('G', 'C');
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < dna.length(); i++){
+            sb.append(conversionMap.get(dna.charAt(i)));
+        }
+
+        return sb.toString();
     }
 }

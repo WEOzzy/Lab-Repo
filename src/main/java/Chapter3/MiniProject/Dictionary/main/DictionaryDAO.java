@@ -31,7 +31,7 @@ public class DictionaryDAO {
         List<DictionaryEntry> dictionaryEntries = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "CHANGE ME!";
+            String sql = "SELECT * FROM dictionary_entry!";
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){

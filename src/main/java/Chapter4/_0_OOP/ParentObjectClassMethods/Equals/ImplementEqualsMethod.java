@@ -33,4 +33,21 @@ public class ImplementEqualsMethod {
         this.c = c;
     }
 
+    public boolean equals(Object o){
+        // used https://app.revature.com/curriculum/viewactivity/19678/Week%201 as a template
+        // if these occupy the same memory location they will be equal
+        // this and o are what are being compared (this.equals(o))
+        if (o == this){
+            return true;
+        }
+        // if o is not an instance of ImplementEqualsMethod then they are different object types and not equal
+        // is this correct?
+        if (!(o instanceof ImplementEqualsMethod)){
+            return false;
+        }
+        // convert object to be tested to ImplementEqualsMethod
+        ImplementEqualsMethod testVal = (ImplementEqualsMethod)o;
+        return (this.a == testVal.a && this.b == testVal.b && this.c == testVal.c);
+    }
+
 }

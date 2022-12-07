@@ -24,6 +24,12 @@ public class Pyramid {
      * @return a string representation of the pyramid.
      */
     public String returnPyramid(int n){
-        return "";
+        String pyrimid = "*";
+        String add = "\n*";
+        for (int i = 1; i < n; i++){
+            add = add.concat("*");
+            pyrimid = pyrimid.concat(add);
+        }
+        return pyrimid;
     }
 }

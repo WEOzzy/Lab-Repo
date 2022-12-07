@@ -26,7 +26,7 @@ public class GroceryRepositoryTest {
     @Test
     public void groceryListEmptyOnStartTest(){
         List<String> allGroceries = groceryDAO.getAllGroceries();
-        boolean expected = false; // should this be true?
+        boolean expected = true; // should this be true? (I changed it)
         boolean actual = allGroceries.isEmpty();
         Assert.assertEquals(expected, actual);
     }

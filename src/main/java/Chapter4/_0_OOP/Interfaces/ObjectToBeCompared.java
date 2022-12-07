@@ -26,7 +26,13 @@ public class ObjectToBeCompared implements Comparable<ObjectToBeCompared>{
      * and positive otherwise. If 'val' is equal for both objects, return 0.
      */
     public int compareTo(ObjectToBeCompared o) {
-        return 0;
+        if (o.val > this.val){
+            return -1;
+        } else if (o.val < this.val){
+            return 1;
+        }else {
+            return 0;
+        }
     }
 
 }
