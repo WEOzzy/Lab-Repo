@@ -10,7 +10,7 @@ public class StackExercise {
      * @return a newly instantiated Stack.
      */
     public Stack<String> createNewStack(){
-        return null;
+        return new Stack<>();
     }
 
     /**
@@ -18,7 +18,7 @@ public class StackExercise {
      * @return the number of elements in stack.
      */
     public int getSize(Stack<String> stack){
-        return 0;
+        return stack.size();
     }
 
     /**
@@ -27,6 +27,7 @@ public class StackExercise {
      * @param item a String to be added to stack.
      */
     public void addToTopOfStack(Stack<String> stack, String item){
+        stack.add(item);
     }
 
     /**
@@ -36,7 +37,7 @@ public class StackExercise {
      * @return the value popped from the top of the stack.
      */
     public String removeFromTopOfStack(Stack<String> stack){
-        return "";
+        return stack.pop();
     }
     /**
      * Return the value at the top of a stack without removing the value.
@@ -44,6 +45,6 @@ public class StackExercise {
      * @return the value peeked from the top of the stack.
      */
     public String getTopOfStackWithoutRemoving(Stack<String> stack){
-        return "";
+        return stack.peek();
     }
 }

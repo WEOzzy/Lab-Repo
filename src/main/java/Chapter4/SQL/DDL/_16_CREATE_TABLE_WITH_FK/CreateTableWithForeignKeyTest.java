@@ -57,6 +57,7 @@ public class CreateTableWithForeignKeyTest {
             PreparedStatement ps = connection.prepareStatement(sql + sql1);
 
             ps.executeUpdate();
+            System.out.println("table dropped successfully");
 
         } catch (SQLException e) {
             System.out.println("dropping table");

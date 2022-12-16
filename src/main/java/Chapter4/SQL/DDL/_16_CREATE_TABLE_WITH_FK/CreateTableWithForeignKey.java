@@ -84,7 +84,12 @@ public class CreateTableWithForeignKey {
      */
     public void problem(){
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        // there seems to be a problem with this, tables cannot be successfully dropped for cleanup
+        String sql = "CREATE TABLE posts (" +
+                "id SERIAL PRIMARY KEY," +
+                "post VARCHAR(250)," +
+                "user_fk INTEGER," +
+                "CONSTRAINT posts_users_fk FOREIGN KEY (user_fk) REFERENCES users (id);";
 
         try {
             Connection connection = ConnectionUtil.getConnection();
