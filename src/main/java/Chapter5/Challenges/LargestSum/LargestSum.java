@@ -8,7 +8,17 @@ public class LargestSum {
      * @return the largest possible sum of separate numbers from num.
      */
     public int bigSum(int[] num){
-        return 0;
+        int maxSum = 0;
+        for (int i = 0; i < num.length; i++) {
+            for (int j = 0; j < num.length; j++) {
+                if (i != j ) {
+                    if (num[i] + num[j] > maxSum) {
+                        maxSum = num[i] + num[j];
+                    }
+                }
+            }
+        }
+        return maxSum;
     }
 }
 
