@@ -47,7 +47,7 @@ public class AlterATable {
      */
     public void problem1(){
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        String sql = "ALTER TABLE users ADD COLUMN lastname VARCHAR(100);";
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -74,7 +74,7 @@ public class AlterATable {
      */
     public void problem2(){
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        String sql = "ALTER TABLE users DROP COLUMN firstname;";
 
         try {
             Connection connection = ConnectionUtil.getConnection();

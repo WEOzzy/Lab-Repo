@@ -54,7 +54,7 @@ public class CreateAView {
      */
     public void problem1(){
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        String sql = "CREATE VIEW firstname_lastname AS SELECT firstname, lastname FROM users;";
 
         try {
             Connection connection = ConnectionUtil.getConnection();

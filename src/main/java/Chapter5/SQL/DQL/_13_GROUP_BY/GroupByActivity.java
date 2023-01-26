@@ -46,7 +46,7 @@ public class GroupByActivity {
          */
 
         //Write your statement below:
-        String sql = "CHANGE ME";
+        String sql = "SELECT artist, COUNT(song) FROM songs GROUP BY(artist);";
 
 
         //The following code will execute your statement on the database
@@ -76,7 +76,7 @@ public class GroupByActivity {
          */
 
         //Write your statement below:
-        String sql = "CHANGE ME";
+        String sql = "SELECT album, COUNT(album) FROM songs GROUP BY album ORDER BY COUNT(album) DESC";
 
         //The following code will execute your statement on the database
         String album = "";

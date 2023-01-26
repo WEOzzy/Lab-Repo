@@ -10,7 +10,8 @@ public class ContainsDuplicates {
      * @return true if nums contains any duplicate values, false if it does not.
      */
     public boolean containsDuplicate(int[] nums){
-        int []nums2 = Arrays.stream(nums).distinct().toArray();
+        int[] nums2 = Arrays.stream(nums).distinct().toArray();
+
 
         return (nums.length > nums2.length);
     }

@@ -7,6 +7,12 @@ public class Palindrome {
      * @return true if str is a palindrome, false otherwise.
      */
     public boolean pal(String str){
+        StringBuilder sb = new StringBuilder();
+        sb.append(str);
+        String revStr = sb.reverse().toString();
+        if (str.equals(revStr)) {
+            return true;
+        }
         return false;
     }
 }

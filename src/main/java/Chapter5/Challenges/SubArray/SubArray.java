@@ -9,6 +9,10 @@ public class SubArray {
      * @return a sub-array of nums containing the values between start and end.
      */
     public int[] sub(int[] nums, int start, int end){
-        return null;
+        int[] nums2 = new int[end - start];
+        for (int i = start, j = 0; i < end; i++, j++) {
+            nums2[j] = nums[i];
+        }
+        return nums2;
     }
 }

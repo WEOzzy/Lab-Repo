@@ -29,7 +29,7 @@ public class Truncate {
      */
     public void problem1(){
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        String sql = "TRUNCATE TABLE users;";
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -55,7 +55,7 @@ public class Truncate {
      */
     public void problem2(){
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        String sql = "TRUNCATE TABLE songs;";
 
         try {
             Connection connection = ConnectionUtil.getConnection();
