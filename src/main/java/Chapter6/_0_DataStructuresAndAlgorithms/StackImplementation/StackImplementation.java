@@ -23,7 +23,13 @@ public class StackImplementation<T> {
      * Don't forget to increment the size!
      */
     public void push(T value){
-
+        if (head == null) {
+            head = new StackNode<>(value, null);
+            size = 1;
+        } else {
+            head = new StackNode<>(value, head);
+            size += 1;
+        }
     }
 
     /**
@@ -31,6 +37,9 @@ public class StackImplementation<T> {
      * @return true if the stack is empty, false otherwise.
      */
     public boolean isEmpty(){
+        if (head == null) {
+            return true;
+        }
         return false;
     }
 
@@ -38,6 +47,9 @@ public class StackImplementation<T> {
      * @return the value of the head (top item) of the stack.
      */
     public T peek(){
+        if (head != null) {
+            return head.data;
+        }
         return null;
     }
     /**
@@ -46,6 +58,13 @@ public class StackImplementation<T> {
      * Don't forget to decrement the size!
      */
     public T pop(){
+        if (head != null) {
+            T data = head.data;
+            head = head.next;
+            size -= 1;
+            // pretty sure this is wrong
+            return data;
+        }
         return null;
     }
 

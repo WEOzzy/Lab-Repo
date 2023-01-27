@@ -9,6 +9,6 @@ public class MethodReflection {
      * @return
      */
     public Method[] getMyMethods(){
-        return null;
+        return this.getClass().getMethods();
     }
 }

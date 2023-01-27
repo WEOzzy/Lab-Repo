@@ -32,7 +32,7 @@ public class SecondsToHHMMSSTest {
      */
     @Test
     public void convertTest3(){
-        int input = 12345;
+        int input = 9999; // input was wrong on original test
         String expected = "02:46:39";
         String actual = secondsToHHMMSS.convert(input);
         Assert.assertEquals(expected,actual);

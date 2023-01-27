@@ -14,6 +14,6 @@ public class FieldReflection {
      * This is how an ORM gets information about its entities.
      */
     public Field[] getMyFields(){
-        return null;
+        return this.getClass().getFields();
     }
 }

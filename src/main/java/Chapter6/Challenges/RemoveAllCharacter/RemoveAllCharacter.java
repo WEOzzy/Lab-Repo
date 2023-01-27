@@ -8,6 +8,11 @@ public class RemoveAllCharacter {
      * @return str, without any characters of type ch.
      */
     public String removeAll(String str, String ch){
-        return null;
+        StringBuilder sb = new StringBuilder();
+        String[] splitArr = str.split(ch);
+        for (int i = 0; i < splitArr.length; i++) {
+            sb.append(splitArr[i]);
+        }
+        return sb.toString();
     }
 }

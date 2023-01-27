@@ -7,7 +7,7 @@ public class ClassReflection {
      * @return the ClassReflection class.
      */
     public Class getMyClass(){
-        return null;
+        return this.getClass();
     }
 
 }

@@ -13,6 +13,17 @@ public class ReverseAllWords {
      * @return str, with every word (delineated by spaces) reversed, while keeping the old order.
      */
     public String reverse(String str){
-        return "";
+        StringBuilder sb = new StringBuilder();
+        String[] strArr = str.split(" ");
+        for (int i = 0; i < strArr.length; i++) {
+            char[] revStr = strArr[i].toCharArray();
+            for (int j = revStr.length - 1; j >= 0; j--) {
+                sb.append(revStr[j]);
+            }
+            if (i != strArr.length - 1) {
+                sb.append(" ");
+            }
+        }
+        return sb.toString();
     }
 }

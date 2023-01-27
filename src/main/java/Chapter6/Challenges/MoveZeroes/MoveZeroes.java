@@ -8,6 +8,17 @@ public class MoveZeroes {
      * @return
      */
     public int[] move(int[] nums){
-        return null;
+        int[] sortedNums = new int[nums.length];
+        for (int i = 0, j = nums.length - 1, k = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                sortedNums[j] = 0;
+                j--;
+            } else {
+                sortedNums[k] = nums[i];
+                k++;
+            }
+        }
+
+        return sortedNums;
     }
 }

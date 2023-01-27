@@ -6,6 +6,10 @@ public class ReverseArray {
      * @return a list of ints that is in the reversed order of nums.
      */
     public int[] reverse(int[] nums){
-        return null;
+        int[] revNums = new int[nums.length];
+        for (int i = nums.length - 1, j = 0; i >= 0; i--, j++) {
+            revNums[j] = nums[i];
+        }
+        return revNums;
     }
 }

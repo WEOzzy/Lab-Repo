@@ -18,6 +18,19 @@ public class Checkerboard {
      * @return a checkerboard pattern of 0's and 1's as demonstrated above.
      */
     public int[][] createCheckerboard(int n){
-        return null;
+        int[][] board = new int[n][n];
+        int tile = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                board[i][j] = tile % 2;
+                tile++;
+            }
+            if (board[i][0] == 0) {
+                tile = 1;
+            } else {
+                tile = 0;
+            }
+        }
+        return board;
     }
 }

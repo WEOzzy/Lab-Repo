@@ -20,6 +20,16 @@ public class PigLatinSentence {
      * @return a String of words in which all the constituent words of in have been converted into pigLatin.
      */
     public String returnPigLatinSentence(String in){
-        return "";
+        StringBuilder sb = new StringBuilder();
+        String [] strArr = in.split(" ");
+        for (int i = 0; i < strArr.length; i++){
+            sb.append(strArr[i].substring(1));
+            sb.append(strArr[i].charAt(0));
+            sb.append("ay");
+            if (i != strArr.length - 1) {
+                sb.append(" ");
+            }
+        }
+        return sb.toString();
     }
 }

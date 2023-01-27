@@ -7,6 +7,11 @@ public class Prime {
      * @return true if n is a prime number, false if n is not a prime number.
      */
     public boolean isPrime(int n){
-        return false;
+        for (int i = n-1; i > 1; i--) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
